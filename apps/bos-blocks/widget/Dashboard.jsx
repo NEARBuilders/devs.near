@@ -1,13 +1,47 @@
+/**
+ * TODO
+ *
+ * - [ ] add compose for feed, it shares the same "item", but uses a different "set" adapter (Social.index vs Social.set)
+ * - [ ]
+ *
+ */
+
 const { Feed } = VM.require("devs.near/widget/Feed") || (() => {});
 const { Create } = VM.require("devs.near/widget/Create") || (() => {});
 
+const accountId = context.accountId;
 
+const myFeeds = JSON.parse(
+  Social.get(`${context.accountId}/settings/every/feed`, "final") || "null"
+);
+
+function getPersonalizedIndex() {
+  if (myFeeds) {
+    return myFeeds.map((feed) => {
+      return {
+        action: feed.action,
+        key: feed.key,
+        options: {
+          limit: 10,
+          order: "desc",
+          accountId: undefined,
+        },
+        cacheOptions: {
+          ignoreCache: true,
+        },
+      };
+    });
+  } else {
+    return [];
+  }
+}
 
 const availableFeeds = [
   {
     name: "main",
     description: "Main feed",
     type: "social",
+    postTemplate: "devs.near/widget/Post",
     props: {
       index: [
         {
@@ -41,6 +75,7 @@ const availableFeeds = [
     name: "#dev",
     description: "hashtag feed",
     type: "social",
+    postTemplate: "devs.near/widget/Post",
     props: {
       index: {
         action: "hashtag",
@@ -56,6 +91,32 @@ const availableFeeds = [
       },
     },
   },
+  {
+    name: "embeds",
+    description: "embeds feed",
+    type: "social",
+    postTemplate: "embeds.near/widget/Post.Index",
+    props: {
+      index: {
+        action: "post",
+        key: "main",
+        options: {
+          limit: 10,
+          order: "desc",
+          accountId: ["efiz.near"],
+        },
+      },
+    },
+  },
+  {
+    name: "personalized",
+    description: "personalized feed",
+    type: "social",
+    postTemplate: "mob.near/widget/N.Post",
+    props: {
+      index: getPersonalizedIndex(),
+    },
+  },
 ];
 
 const defaultFeed = availableFeeds[0];
@@ -67,21 +128,18 @@ const toggleShowCreate = () => {
 };
 
 function Content({ data }) {
-  const { props } = data;
+  const { props, postTemplate } = data;
   return (
     <div key={data.name} className="border p-4 rounded">
       {showCreate ? (
-        <div>
-          <button onClick={toggleShowCreate}>back</button>
-          <Create />
-        </div>
+        <Create />
       ) : (
         <Feed
           index={props.index}
           Item={({ accountId, path, blockHeight, type }) => {
             return (
               <Widget
-                src={"mob.near/widget/N.Post"}
+                src={postTemplate}
                 props={{
                   accountId,
                   path,
