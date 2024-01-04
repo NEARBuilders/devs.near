@@ -1,4 +1,4 @@
-# bos-blocks
+# BOS Blocks
 
 ## Getting Started
 

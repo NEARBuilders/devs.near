@@ -11,7 +11,6 @@ const Feed = ({ index, typeWhitelist, Item, Layout }) => {
 
   const renderItem = (a, i) => {
     if (typeWhitelist && !typeWhitelist.includes(a.value.type)) {
-      // this can be "md", or a layer deeper (everything is md)
       return false;
     }
     return (
@@ -29,7 +28,7 @@ const Feed = ({ index, typeWhitelist, Item, Layout }) => {
   if (Array.isArray(index)) {
     return (
       <Widget
-        src="devs.near/widget/PR.MergedIndexFeed"
+        src="/*__@appAccount__*//widget/PR.MergedIndexFeed"
         props={{
           index,
           renderItem,
@@ -40,7 +39,7 @@ const Feed = ({ index, typeWhitelist, Item, Layout }) => {
   } else {
     return (
       <Widget
-        src="devs.near/widget/PR.FilteredIndexFeed"
+        src="/*__@appAccount__*//widget/PR.FilteredIndexFeed"
         props={{
           index,
           renderItem,

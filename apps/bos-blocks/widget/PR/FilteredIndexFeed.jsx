@@ -5,7 +5,7 @@ const filter = context.accountId && {
 return (
   <Widget
     loading={props.loading}
-    src="mob.near/widget/IndexFeed"
+    src="/*__@appAccount__*//widget/PR.IndexFeed"
     props={{ filter, ...props }}
   />
 );

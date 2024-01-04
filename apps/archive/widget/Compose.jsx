@@ -4,27 +4,56 @@ if (!context.accountId) {
 
 const indexKey = props.indexKey ?? "main";
 const draftKey = props.indexKey ?? "draft";
-const draft = Storage.privateGet(draftKey);
+const draft = Storage.privateGet(draftKey); // this should depend on feed key
 const groupId = props.groupId;
+const postType = props.postType;
 
 if (draft === null) {
   return "";
 }
 
-const [initialText] = useState(draft);
+const [initialText] = useState(draft || postType.template);
+
+function generateUID() {
+  const maxHex = 0xffffffff;
+  const randomNumber = Math.floor(Math.random() * maxHex);
+  return randomNumber.toString(16).padStart(8, "0");
+}
 
 const composeData = () => {
+  const thingId = generateUID();
   const data = {
+    update: {
+      [thingId]: {
+        "": JSON.stringify({
+          content: state.content.text || "",
+        }),
+        metadata: {
+          type: postType.type,
+        },
+      },
+    },
     post: {
-      main: JSON.stringify(Object.assign({ groupId }, state.content)),
+      main: JSON.stringify({
+        type: "md",
+        text: `[EMBED](${context.accountId}/${postType.type}/${thingId})`,
+      }),
     },
     index: {
-      post: JSON.stringify({
-        key: indexKey,
-        value: {
-          type: "md",
+      post: JSON.stringify([
+        {
+          key: indexKey,
+          value: {
+            type: "md",
+          },
         },
-      }),
+        {
+          key: postType.type,
+          value: {
+            type: "md",
+          },
+        },
+      ]),
     },
   };
 

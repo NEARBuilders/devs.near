@@ -1,0 +1,15 @@
+name: Deploy Components to Testnet
+on:
+  push:
+    branches: [develop]
+jobs:
+  deploy-mainnet:
+    uses: NEARBuilders/bos-workspace/.github/workflows/deploy.yml@main
+    with:
+      deploy-env: "testnet"
+      app-name: "bos-blocks"
+      deploy-account-address:  nearbuilders.testnet
+      signer-account-address: nearbuilders.testnet
+      signer-public-key: ${{ vars.NEARBUILDERS_TESTNET_PUBLIC_KEY }}
+    secrets:
+      SIGNER_PRIVATE_KEY:  ${{ secrets.NEARBUILDERS_TESTNET_PRIVATE_KEY }}
