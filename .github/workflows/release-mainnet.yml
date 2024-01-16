@@ -10,6 +10,6 @@ jobs:
       app-name: "bos-blocks"
       deploy-account-address:  devs.near
       signer-account-address: devs.near
-      signer-public-key: ${{ vars.DEVS_PUBLIC_KEY }}
+      signer-public-key: ${{ vars.DEVS_SIGNER_PUBLIC_KEY }}
     secrets:
-      SIGNER_PRIVATE_KEY:  ${{ secrets.DEVS_PRIVATE_KEY }}
+      SIGNER_PRIVATE_KEY:  ${{ secrets.DEVS_SIGNER_PRIVATE_KEY }}
