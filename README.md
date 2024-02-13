@@ -1,4 +1,4 @@
-# BOS Blocks
+# devs.near
 
 ## Getting Started
 

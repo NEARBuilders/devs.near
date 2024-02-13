@@ -7,7 +7,7 @@ jobs:
     uses: NEARBuilders/bos-workspace/.github/workflows/deploy.yml@main
     with:
       deploy-env: "mainnet"
-      app-name: "bos-blocks"
+      app-name: "devs.near"
       deploy-account-address:  devs.near
       signer-account-address: devs.near
       signer-public-key: ${{ vars.DEVS_SIGNER_PUBLIC_KEY }}
