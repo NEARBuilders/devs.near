@@ -8,9 +8,9 @@ jobs:
     with:
       bw-legacy: false
       deploy-env: "testnet"
-      app-name: "nearbuilders"
-      deploy-account-address: nearbuilders.testnet
-      signer-account-address: nearbuilders.testnet
-      signer-public-key: ${{ vars.NEARBUILDERS_TESTNET_PUBLIC_KEY }}
+      app-name: "devs.near"
+      deploy-account-address: builddao.testnet
+      signer-account-address: builddao.testnet
+      signer-public-key: ed25519:6ycWXZES2zEGPurZqP35AUQx92aAzuS7r9ea1GcSQQiT
     secrets:
-      SIGNER_PRIVATE_KEY:  ${{ secrets.NEARBUILDERS_TESTNET_PRIVATE_KEY }}
+      SIGNER_PRIVATE_KEY:  ${{ secrets.TESTNET_SIGNER_PRIVATE_KEY }}
