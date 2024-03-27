@@ -6,10 +6,10 @@
   "license": "MIT",
   "scripts": {
     "bw": "bos-workspace",
-    "dev": "bw ws dev",
-    "dev:testnet": "bw ws dev -n testnet",
-    "build": "bw ws build",
-    "build:testnet": "bw ws build -n testnet"
+    "dev": "bw dev",
+    "dev:testnet": "bw dev -n testnet",
+    "build": "bw build",
+    "build:testnet": "bw build -n testnet"
   },
   "devDependencies": {
     "bos-workspace": "^1.0.0-alpha",
