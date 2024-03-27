@@ -1,19 +1,17 @@
-# devs.near
+# Quickstart
 
-## Getting Started
+## Getting started
 
-```
+1. Install packages
+
+```cmd
 npm install
 ```
 
-Then, run the command:
+2. Start dev environment
 
-```
+```cmd
 npm run dev
 ```
 
-This will serve the widgets from `http://127.0.0.1:4040/`.
-
-Go to [everything.dev/flags](https://everything.dev) and paste this value there.
-
-Once set, see the locally served app at [devs.near/widget/index](https://everything.dev/devs.near/widget/index).
+This will start a gateway at [127.0.0.1:8080](http://127.0.0.1:8080) which will render your local widgets. The entry point for this app is [every.near/widget/app](http://127.0.0.1:8080/devs.near/widget/Library)

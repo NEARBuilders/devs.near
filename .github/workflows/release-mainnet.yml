@@ -6,10 +6,11 @@ jobs:
   deploy-mainnet:
     uses: NEARBuilders/bos-workspace/.github/workflows/deploy.yml@main
     with:
+      bw-legacy: false
       deploy-env: "mainnet"
       app-name: "devs.near"
       deploy-account-address:  devs.near
       signer-account-address: devs.near
-      signer-public-key: ${{ vars.DEVS_SIGNER_PUBLIC_KEY }}
+      signer-public-key: ed25519:J8XTprxQ1nAmCPwtYWHLBCUWq4mwn8zkE2aHwJTtFo1Y
     secrets:
-      SIGNER_PRIVATE_KEY:  ${{ secrets.DEVS_SIGNER_PRIVATE_KEY }}
+      SIGNER_PRIVATE_KEY:  ${{ secrets.SIGNER_PRIVATE_KEY }}
