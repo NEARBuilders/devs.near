@@ -6,8 +6,8 @@ jobs:
   deploy-mainnet:
     uses: NEARBuilders/bos-workspace/.github/workflows/deploy.yml@main
     with:
-      cli-version: "0.3.13"
       bw-legacy: false
+      build-env: "testnet"
       deploy-env: "testnet"
       app-name: "devs.near"
       deploy-account-address: builddao.testnet
