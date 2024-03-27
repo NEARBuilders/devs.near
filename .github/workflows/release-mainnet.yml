@@ -6,6 +6,7 @@ jobs:
   deploy-mainnet:
     uses: NEARBuilders/bos-workspace/.github/workflows/deploy.yml@main
     with:
+      bw-legacy: false
       deploy-env: "mainnet"
       app-name: "devs.near"
       deploy-account-address:  devs.near

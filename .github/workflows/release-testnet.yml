@@ -6,9 +6,10 @@ jobs:
   deploy-mainnet:
     uses: NEARBuilders/bos-workspace/.github/workflows/deploy.yml@main
     with:
+      bw-legacy: false
       deploy-env: "testnet"
-      app-name: "bos-blocks"
-      deploy-account-address:  nearbuilders.testnet
+      app-name: "nearbuilders"
+      deploy-account-address: nearbuilders.testnet
       signer-account-address: nearbuilders.testnet
       signer-public-key: ${{ vars.NEARBUILDERS_TESTNET_PUBLIC_KEY }}
     secrets:
