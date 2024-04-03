@@ -10,10 +10,10 @@ if (kit === null) {
 
 const defaultWidgets = [
   {
-    src: "devs.near/widget/GitBos.info",
+    src: "${config_account}/widget/GitBos.info",
   },
   {
-    src: "devs.near/widget/dev.collab",
+    src: "${config_account}/widget/dev.collab",
   },
 ];
 

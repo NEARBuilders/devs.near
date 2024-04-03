@@ -8,10 +8,10 @@ if (kit === null) {
 
 const defaultWidgets = [
   {
-    src: "devs.near/widget/GitBos.info",
+    src: "${config_account}/widget/GitBos.info",
   },
   {
-    src: "devs.near/widget/dev.collab",
+    src: "${config_account}/widget/dev.collab",
   },
 ];
 
@@ -38,7 +38,7 @@ return (
       {context.accountId && (
         <a
           key="edit"
-          href={"/devs.near/widget/GitBos.kit.editor"}
+          href={"/${config_account}/widget/GitBos.kit.editor"}
           className="edit-link position-absolute top-0 end-0 link-secondary me-2 mt-1"
         >
           <i class="bi bi-pencil-square" /> Customize

@@ -20,7 +20,7 @@ return (
       <div className="m-2">
         <h3 className="mb-3">Members</h3>
         <Widget
-          src="devs.near/widget/group.members"
+          src="${config_account}/widget/group.members"
           props={{ groupId, group }}
         />
       </div>

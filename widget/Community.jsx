@@ -156,7 +156,7 @@ return (
         </Flex>
       ) : (
         <Content>
-          <Widget src="devs.near/widget/community.Groups" />
+          <Widget src="${config_account}/widget/community.Groups" />
         </Content>
       )}
     </Container>

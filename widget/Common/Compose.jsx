@@ -340,7 +340,7 @@ return (
         {autocompleteEnabled && state.showAccountAutocomplete && (
           <div className="pt-1 w-100 overflow-hidden">
             <Widget
-              src="devs.near/widget/Common.AccountAutocomplete"
+              src="${config_account}/widget/Common.AccountAutocomplete"
               props={{
                 term: state.text.split("@").pop(),
                 onSelect: autoCompleteAccountId,

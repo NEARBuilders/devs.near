@@ -1,4 +1,4 @@
-const { Feed } = VM.require("devs.near/widget/Module.Feed");
+const { Feed } = VM.require("${config_account}/widget/Module.Feed");
 const { ContextMenu } = VM.require("efiz.near/widget/Module.ContextMenu");
 
 ContextMenu = ContextMenu || (() => <></>); // make sure you have this or else it can break
@@ -16,7 +16,7 @@ return (
       <b>Every Post</b>
     </h3>
     <Widget
-      src="devs.near/widget/Compose"
+      src="${config_account}/widget/Compose"
       // props={{
       //   index: {
       //     post: JSON.stringify([

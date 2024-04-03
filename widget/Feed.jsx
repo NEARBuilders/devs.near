@@ -61,7 +61,7 @@ const Feed = ({
   if (items) {
     return (
       <Widget
-        src="devs.near/widget/PR.ItemFeed"
+        src="${config_account}/widget/PR.ItemFeed"
         props={{
           items,
           renderItem,
@@ -76,13 +76,13 @@ const Feed = ({
     <>
       {showCompose && (
         <Widget
-          src="devs.near/widget/Compose"
+          src="${config_account}/widget/Compose"
           props={{ index: composeIndex(), appendHashtags }}
         />
       )}
       {Array.isArray(index) ? (
         <Widget
-          src="devs.near/widget/PR.MergedIndexFeed"
+          src="${config_account}/widget/PR.MergedIndexFeed"
           props={{
             index,
             renderItem,
@@ -91,7 +91,7 @@ const Feed = ({
         />
       ) : (
         <Widget
-          src="devs.near/widget/PR.FilteredIndexFeed"
+          src="${config_account}/widget/PR.FilteredIndexFeed"
           props={{
             index,
             renderItem,

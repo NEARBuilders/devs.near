@@ -278,7 +278,7 @@ return (
         {items.map((component, i) => (
           <Item key={component.accountId + component.widgetName}>
             <Widget
-              src="devs.near/widget/component.card"
+              src="${config_account}/widget/component.card"
               props={{
                 src: `${component.accountId}/widget/${component.widgetName}`,
                 blockHeight: component.blockHeight,

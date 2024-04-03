@@ -11,7 +11,7 @@ const propsTable = `
 const widgetCode = `
 \`\`\`jsx
 
-const { Feed } = VM.require("devs.near/widget/Feed") ?? {
+const { Feed } = VM.require("${config_account}/widget/Feed") ?? {
   Feed: () => <></>;
 };
 
@@ -60,7 +60,7 @@ return (
 \`\`\`
 `;
 
-const { Feed } = VM.require("devs.near/widget/Feed") ?? {
+const { Feed } = VM.require("${config_account}/widget/Feed") ?? {
   Feed: () => <></>,
 };
 

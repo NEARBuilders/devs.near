@@ -54,7 +54,7 @@ const renderItem = (item) => {
         return (
           <div className="col-auto m-1">
             <Widget
-              src="devs.near/widget/group.info"
+              src="${config_account}/widget/group.info"
               props={{
                 groupId,
                 accountId: item.accountId,

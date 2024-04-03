@@ -1,5 +1,5 @@
 const accountId = props.accountId ?? context.accountId;
-const creatorId = props.creatorId ?? "devs.near";
+const creatorId = props.creatorId ?? "${config_account}";
 const groupId = props.groupId ?? "builders";
 
 const joined = Social.keys(`${creatorId}/graph/${groupId}/${accountId}/**`);
@@ -43,7 +43,7 @@ return (
     <div className="m-2 d-flex gap-2 flex-wrap">
       <a
         className="btn btn-outline-secondary border-0"
-        href="/near/widget/ProfilePage?accountId=devs.near"
+        href="/near/widget/ProfilePage?accountId=${config_account}"
       >
         <i className="bi bi-person-circle"></i>
       </a>

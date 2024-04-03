@@ -1,8 +1,8 @@
-const { Router } = VM.require("devs.near/widget/Router") || {
+const { Router } = VM.require("${config_account}/widget/Router") || {
   Router: () => <></>,
 };
 
-const { href } = VM.require("buildhub.near/widget/lib.url") || {
+const { href } = VM.require("${config_account}/widget/lib.url") || {
   href: () => "/",
 };
 
@@ -114,11 +114,11 @@ const editors = [
     label: "default textarea",
   },
   {
-    value: "devs.near/widget/markdown.SimpleMDE",
+    value: "${config_account}/widget/markdown.SimpleMDE",
     label: "SimpleMDE",
   },
   {
-    value: "devs.near/widget/markdown.MarkdownEditorIframe",
+    value: "${config_account}/widget/markdown.MarkdownEditorIframe",
     label: "MarkdownEditorIframe",
   },
 ];
@@ -184,7 +184,7 @@ return (
               <div className="w-100">
                 <ModalBox>
                   <Widget
-                    src={"devs.near/widget/modal.create"}
+                    src={"${config_account}/widget/modal.create"}
                     props={{
                       creatorId: context.accountId,
                       path: path,
@@ -231,7 +231,7 @@ return (
               <div className="w-100">
                 <ModalBox>
                   <Widget
-                    src={"devs.near/widget/modal.post"}
+                    src={"${config_account}/widget/modal.post"}
                     props={{
                       creatorId: context.accountId,
                       path: path,

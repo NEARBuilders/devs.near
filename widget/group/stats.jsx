@@ -1,6 +1,6 @@
 const accountId = props.accountId ?? context.accountId;
 const groupId = props.groupId ?? "526fb256e74eelmf0nw3n5909bc189c13d";
-const creatorId = props.creatorId ?? "devs.near";
+const creatorId = props.creatorId ?? "${config_account}";
 
 if (!accountId) {
   return "";
@@ -26,7 +26,7 @@ return (
     <div className="d-flex flex-row">
       <div className="me-4">
         <a
-          href={`#/devs.near/widget/group?groupId=${groupId}&tab=contributors`}
+          href={`#/${config_account}/widget/group?groupId=${groupId}&tab=contributors`}
           className="text-dark"
         >
           {numContributors !== null ? (
@@ -39,7 +39,7 @@ return (
       </div>
       <div>
         <a
-          href={`#/devs.near/widget/group?groupId=${groupId}&tab=community`}
+          href={`#/${config_account}/widget/group?groupId=${groupId}&tab=community`}
           className="text-dark"
         >
           {numCommunity !== null ? (

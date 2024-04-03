@@ -22,7 +22,7 @@ const Tag = styled.a`
 return (
   <div className="d-flex flex-row">
     <Widget
-      src="devs.near/widget/group.image"
+      src="${config_account}/widget/group.image"
       props={{
         group,
         widgetName,
@@ -45,7 +45,7 @@ return (
                 className="me-1 fw-light badge border border-secondary text-bg-light"
               >
                 <a
-                  href={`/devs.near/widget/every.group?tag=${tag}`}
+                  href={`/${config_account}/widget/every.group?tag=${tag}`}
                   style={{ textDecoration: "none" }}
                   className="no-text-decoration"
                 >

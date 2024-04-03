@@ -105,12 +105,12 @@ const TagsWrapper = styled.div`
 return (
   <Card>
     <a
-      href={`/devs.near/widget/group.page?groupId=${groupId}&creatorId=${creatorId}`}
+      href={`/${config_account}/widget/group.page?groupId=${groupId}&creatorId=${creatorId}`}
       style={{ textDecoration: "none" }}
     >
       <CardLeft>
         <Widget
-          src="devs.near/widget/group.inline"
+          src="${config_account}/widget/group.inline"
           props={{ group: groupInfo, groupId, accountId: creatorId }}
         />
       </CardLeft>
@@ -119,7 +119,7 @@ return (
       <div className="ms-autome-md-2 d-flex align-items-center">
         <div className="bell">
           <a
-            href={`/devs.near/widget/group.index?groupId=${groupId}`}
+            href={`/${config_account}/widget/group.index?groupId=${groupId}`}
             className="bell-icon"
           >
             <i className="bi bi-bell"></i>
@@ -133,13 +133,13 @@ return (
         {groupKey === context.accountId && (
           <a
             className="btn btn-outline-dark"
-            href={`/devs.near/widget/group.edit?groupId=${groupId}`}
+            href={`/${config_account}/widget/group.edit?groupId=${groupId}`}
           >
             edit
           </a>
         )}
         <Widget
-          src="devs.near/widget/group.join"
+          src="${config_account}/widget/group.join"
           props={{ groupId, accountId, creatorId: props.creatorId }}
         />
       </>

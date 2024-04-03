@@ -54,7 +54,7 @@ const tabs = [
     module: () => (
       <>
         <Widget
-          src="devs.near/widget/Compose"
+          src="${config_account}/widget/Compose"
           props={{
             index: {
               post: JSON.stringify([
@@ -121,7 +121,7 @@ const tabs = [
     module: () => (
       <>
         <p>These are mutual members across all graphs</p>
-        <Widget src="devs.near/widget/group.members" props={{ groupId }} />
+        <Widget src="${config_account}/widget/group.members" props={{ groupId }} />
       </>
     ),
   },
@@ -133,7 +133,7 @@ const tabs = [
         <p>
           These are the users that have created their versions of this group.
         </p>
-        <Widget src="devs.near/widget/group.members" props={{ groupId }} />
+        <Widget src="${config_account}/widget/group.members" props={{ groupId }} />
       </>
     ),
   },
@@ -142,7 +142,7 @@ const tabs = [
     title: "Settings",
     module: () => (
       <Widget
-        src="devs.near/widget/group.settings"
+        src="${config_account}/widget/group.settings"
         props={{ groupId, groupData }}
       />
     ),

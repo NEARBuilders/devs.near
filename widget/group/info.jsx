@@ -1,6 +1,6 @@
 const accountId = props.accountId ?? context.accountId;
 const groupId = props.groupId ?? "526fb256e74eelmf0nw3n5909bc189c13d";
-const creatorId = props.creatorId ?? "devs.near";
+const creatorId = props.creatorId ?? "${config_account}";
 
 const groupData =
   props.groupData ?? Social.get(`${accountId}/thing/${groupId}/metadata/**`);
@@ -15,7 +15,7 @@ return (
       className="text-decoration-none link-dark"
     >
       <Widget
-        src="devs.near/widget/group.image"
+        src="${config_account}/widget/group.image"
         props={{
           profile,
           accountId,

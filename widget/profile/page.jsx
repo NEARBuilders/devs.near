@@ -23,7 +23,7 @@ return (
       />
 
       <div className="mt-3 m-2">
-        <Widget src="devs.near/widget/dev.feed" props={{ accountId }} />
+        <Widget src="${config_account}/widget/dev.feed" props={{ accountId }} />
       </div>
     </div>
   </div>

@@ -3,9 +3,9 @@ const groupId = props.groupId ?? "f8ad9d1a76259lmdpjnd74e69162a0a014";
 const creatorId = props.creatorId ?? "hack.near";
 
 const widgets = {
-  group: "devs.near/widget/group.card",
-  create: "devs.near/widget/group.create",
-  edit: "devs.near/widget/group.edit",
+  group: "${config_account}/widget/group.card",
+  create: "${config_account}/widget/group.create",
+  edit: "${config_account}/widget/group.edit",
 };
 
 // We get all of the groups that have been indexed
@@ -137,7 +137,7 @@ return (
   <>
     <Container>
       <Header className="d-flex p-3 px-4 align-items-center rounded justify-content-between">
-        <a href="/near/widget/ProfilePage?accountId=devs.near">
+        <a href="/near/widget/ProfilePage?accountId=${config_account}">
           <Widget
             src="mob.near/widget/Image"
             props={{
@@ -155,7 +155,7 @@ return (
         <div className="ms-auto me-0 me-md-2 d-flex align-items-center">
           <div className="top-right">
             <a
-              href={`/devs.near/widget/group.index?groupId=${groupId}`}
+              href={`/${config_account}/widget/group.index?groupId=${groupId}`}
               className="bell-icon"
             >
               <i className="bi bi-bell"></i>

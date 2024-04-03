@@ -22,7 +22,7 @@ return (
       </div>
       <div className="mb-2">
         <Widget
-          src="devs.near/widget/MetadataEditor"
+          src="${config_account}/widget/MetadataEditor"
           props={{
             initialMetadata: profile,
             onChange: (profile) => State.update({ profile }),

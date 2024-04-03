@@ -1,8 +1,8 @@
-const { Router } = VM.require("devs.near/widget/Router") || {
+const { Router } = VM.require("${config_account}/widget/Router") || {
   Router: () => <></>,
 };
 
-const { href } = VM.require("buildhub.near/widget/lib.url") || {
+const { href } = VM.require("${config_account}/widget/lib.url") || {
   href: () => "/",
 };
 
