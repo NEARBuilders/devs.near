@@ -134,7 +134,7 @@ return (
         <Flex gap="23px" direction="column" alignItems="center">
           {!accountId ? (
             <Widget
-              src="near/widget/DIG.Button"
+              src="${alias_near}/widget/DIG.Button"
               props={{
                 href: "https://shard.dog/ndcconstellation",
                 label: "Create Account",
@@ -144,7 +144,7 @@ return (
             />
           ) : (
             <Widget
-              src="near/widget/DIG.Button"
+              src="${alias_near}/widget/DIG.Button"
               props={{
                 href: "https://shard.dog/ndcconstellation",
                 label: "Get Your NFT",

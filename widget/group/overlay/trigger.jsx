@@ -1,11 +1,11 @@
 return (
   <Widget
     loading={props.children}
-    src="mob.near/widget/N.Common.OverlayTrigger"
+    src="${alias_mob}/widget/N.Common.OverlayTrigger"
     props={{
       popup: (
         <Widget
-          src="mob.near/widget/group.overlay"
+          src="${alias_mob}/widget/group.overlay"
           props={{ groupId: props.groupId, accountId: props.accountId }}
         />
       ),

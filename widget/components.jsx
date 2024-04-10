@@ -241,7 +241,7 @@ return (
 
     <Search>
       <Widget
-        src="near/widget/ComponentSearch"
+        src="${alias_near}/widget/ComponentSearch"
         props={{
           limit: 21,
           onChange: onSearchChange,

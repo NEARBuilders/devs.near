@@ -1,11 +1,11 @@
 /**
- * This is just a direct copy of mob.near/widget/N.Library
+ * This is just a direct copy of ${alias_mob}/widget/N.Library
  */
 const accountId = context.accountId || "root.near";
-const authorId = "mob.near";
+const authorId = "${alias_mob}";
 
 const itemDescription =
-  'The identifier item. It will be used as a unique identifier of the entity that receives the action. It\'s also used as a key of the action in the index.\nThe item should be an object with the following keys: `type`, `path` and optional `blockHeight`.\n- `type`: If the data is stored in the social DB, then the type is likely `"social"`, other types can be defined in the standards.\n- `path`: The path to the item. For a `"social"` type, it\'s absolute path within SocialDB, e.g. `alice.near/post/main`.\n- `blockHeight`: An optional paremeter to indicate the block when the data was stored. Since SocialDB data can be overwritten to save storage, the exact data should be referenced by the block height (e.g. for a given post). But if the latest data should be used, then `blockHeight` should be ommited.\n\nExamples of `item`:\n- `{type: "social", path: "mob.near/widget/N.Library"}`\n- `{type: "social", path: "mob.near/post/main", blockHeight: 81101335}`\n';
+  'The identifier item. It will be used as a unique identifier of the entity that receives the action. It\'s also used as a key of the action in the index.\nThe item should be an object with the following keys: `type`, `path` and optional `blockHeight`.\n- `type`: If the data is stored in the social DB, then the type is likely `"social"`, other types can be defined in the standards.\n- `path`: The path to the item. For a `"social"` type, it\'s absolute path within SocialDB, e.g. `alice.near/post/main`.\n- `blockHeight`: An optional paremeter to indicate the block when the data was stored. Since SocialDB data can be overwritten to save storage, the exact data should be referenced by the block height (e.g. for a given post). But if the latest data should be used, then `blockHeight` should be ommited.\n\nExamples of `item`:\n- `{type: "social", path: "${alias_mob}/widget/N.Library"}`\n- `{type: "social", path: "${alias_mob}/post/main", blockHeight: 81101335}`\n';
 
 const components = [
   {
@@ -111,7 +111,7 @@ const renderComponent = (c, i) => {
       <div className="d-flex flex-row flex-wrap justify-content-between mb-3">
         <div className="path font-monospace">
           <Widget
-            src="mob.near/widget/CopyButton"
+            src="${alias_mob}/widget/CopyButton"
             props={{
               text: widgetSrc,
               label: widgetSrc,
@@ -120,7 +120,7 @@ const renderComponent = (c, i) => {
         </div>
         <div className="source">
           <a
-            href={`/mob.near/widget/WidgetSource?src=${widgetSrc}`}
+            href={`/${alias_mob}/widget/WidgetSource?src=${widgetSrc}`}
             target="_blank"
             className="btn btn-outline-primary border-0"
           >
@@ -146,7 +146,7 @@ const renderComponent = (c, i) => {
         <Markdown text={`\`\`\`jsx\n${embedCode}\n\`\`\``} />
         <div className="embed-copy">
           <Widget
-            src="mob.near/widget/CopyButton"
+            src="${alias_mob}/widget/CopyButton"
             props={{ text: embedCode, className: "btn btn-outline-light" }}
           />
         </div>

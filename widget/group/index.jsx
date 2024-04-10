@@ -74,20 +74,20 @@ const renderItem = (item) => {
           <div className="row">
             <div className="col-auto m-1">
               <Widget
-                src="mob.near/widget/Profile"
+                src="${alias_mob}/widget/Profile"
                 props={{ accountId: item.accountId, tooltip: true }}
               />
             </div>
             <div className="col-auto m-1 mt-3">
               {item.value.type === "add" && `added`}
               <Widget
-                src="mob.near/widget/TimeAgo"
+                src="${alias_mob}/widget/TimeAgo"
                 props={{ blockHeight: item.blockHeight }}
               />
             </div>
             <div className="col-auto m-1">
               <Widget
-                src="mob.near/widget/Profile"
+                src="${alias_mob}/widget/Profile"
                 props={{ accountId: item.value.accountId, tooltip: true }}
               />
             </div>
@@ -102,7 +102,7 @@ const renderItem = (item) => {
 return (
   <div className="m-2">
     <Widget
-      src="mob.near/widget/FilteredIndexFeed"
+      src="${alias_mob}/widget/FilteredIndexFeed"
       props={{ index, renderItem }}
     />
   </div>

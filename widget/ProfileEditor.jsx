@@ -72,7 +72,7 @@ return (
         </CommitButton>
         <a
           className="btn btn-outline-primary ms-2"
-          href={`#/mob.near/widget/ProfilePage?accountId=${accountId}`}
+          href={`#/${alias_mob}/widget/ProfilePage?accountId=${accountId}`}
         >
           View profile
         </a>
@@ -81,7 +81,7 @@ return (
     <div className="col-lg-6">
       <div>
         <Widget
-          src="mob.near/widget/ProfilePage"
+          src="${alias_mob}/widget/ProfilePage"
           props={{ accountId, profile: state.profile }}
         />
       </div>

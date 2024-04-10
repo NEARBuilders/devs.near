@@ -99,7 +99,7 @@ return (
     <h3>GitBos Kit</h3>
     <div className="mb-2">
       <Widget
-        src="mob.near/widget/Welcome.RHS.Editor.ComponentSearch"
+        src="${alias_mob}/widget/Welcome.RHS.Editor.ComponentSearch"
         props={{ extraButtons: openButton }}
       />
     </div>

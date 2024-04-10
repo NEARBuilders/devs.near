@@ -131,7 +131,7 @@ return (
           >
             <Widget
               key={result.accountId}
-              src="mob.near/widget/Profile.ShortInlineBlock"
+              src="${alias_mob}/widget/Profile.ShortInlineBlock"
               props={{
                 accountId: result.accountId,
               }}
