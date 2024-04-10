@@ -10,8 +10,8 @@ jobs:
       build-env: "testnet"
       deploy-env: "testnet"
       app-name: "devs.near"
-      deploy-account-address: mainnet-on.testnet
-      signer-account-address: mainnet-on.testnet
-      signer-public-key: ed25519:3qFVXBG21yC3oMeBZNkCRc7d3nUFn7aFbG4BBWciqz6y
+      deploy-account-address: neardevs.testnet
+      signer-account-address: neardevs.testnet
+      signer-public-key: ed25519:C56jCPM2SWoPWGft9CPNkwjE4hEU58jSrZyReswH2fSg
     secrets:
       SIGNER_PRIVATE_KEY:  ${{ secrets.TESTNET_SIGNER_PRIVATE_KEY }}
