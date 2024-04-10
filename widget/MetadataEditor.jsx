@@ -55,7 +55,7 @@ return (
       <div className="mb-2">
         {options.image.label ?? "Image"}
         <Widget
-          src="mob.near/widget/ImageEditorTabs"
+          src="${alias_mob}/widget/ImageEditorTabs"
           props={{
             image: state.image,
             onChange: (image) => State.update({ image }),
@@ -67,7 +67,7 @@ return (
       <div className="mb-2">
         {options.backgroundImage.label ?? "Background image"}
         <Widget
-          src="mob.near/widget/ImageEditorTabs"
+          src="${alias_mob}/widget/ImageEditorTabs"
           props={{
             image: state.backgroundImage,
             onChange: (backgroundImage) => State.update({ backgroundImage }),
@@ -96,7 +96,7 @@ return (
           {options.tags.label ?? "Give Context with Tags:"}
         </p>
         <Widget
-          src="mob.near/widget/TagsEditor"
+          src="${alias_mob}/widget/TagsEditor"
           props={{
             initialTagsObject: metadata.tags,
             tagsPattern: options.tags.pattern,

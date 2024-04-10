@@ -135,7 +135,7 @@ return (
           />
           <div className="mb-2 mt-3">
             <Widget
-              src="near/widget/MetadataEditor"
+              src="${alias_near}/widget/MetadataEditor"
               props={{
                 initialMetadata: group,
                 onChange: (group) => State.update({ group }),
@@ -207,7 +207,7 @@ return (
                 <div className="d-flex m-2 p-2 justify-content-between align-items-center">
                   <div className="d-flex align-items-center">
                     <Widget
-                      src="mob.near/widget/Profile"
+                      src="${alias_mob}/widget/Profile"
                       props={{ accountId: a }}
                     />
                   </div>

@@ -19,7 +19,7 @@ return (
     {members.map(([accountId], i) => (
       <div key={i} className="d-flex justify-content-between mb-3">
         <div className="me-4">
-          <Widget src="mob.near/widget/Profile" props={{ accountId }} />
+          <Widget src="${alias_mob}/widget/Profile" props={{ accountId }} />
         </div>
       </div>
     ))}

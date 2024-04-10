@@ -139,7 +139,7 @@ return (
       <Header className="d-flex p-3 px-4 align-items-center rounded justify-content-between">
         <a href="/near/widget/ProfilePage?accountId=${config_account}">
           <Widget
-            src="mob.near/widget/Image"
+            src="${alias_mob}/widget/Image"
             props={{
               image: {
                 url: "https://pbs.twimg.com/profile_images/1690850854457204736/KUXVTpZt_400x400.png",

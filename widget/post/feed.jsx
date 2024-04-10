@@ -72,7 +72,7 @@ return (
             Item={() => (
               <Widget
                 loading={<div className="w-100" style={{ height: "200px" }} />}
-                src="mob.near/widget/MainPage.N.Post" // Fork and edit this
+                src="${alias_mob}/widget/MainPage.N.Post" // Fork and edit this
                 props={{
                   accountId: p.accountId,
                   blockHeight: p.blockHeight,

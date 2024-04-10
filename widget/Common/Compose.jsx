@@ -294,7 +294,7 @@ const gifSearchWidget = useMemo(
   () =>
     gifSearch ? (
       <Widget
-        src="mob.near/widget/N.GifSearch"
+        src="${alias_mob}/widget/N.GifSearch"
         props={{
           onHide: () => setGifSearch(false),
           onSelect: (gif) => {
@@ -330,7 +330,7 @@ return (
       >
         <Widget
           key={`markdown-editor-${markdownEditor}-${memoizedEditorKey}`}
-          src="mob.near/widget/MarkdownEditorIframe"
+          src="${alias_mob}/widget/MarkdownEditorIframe"
           props={{
             initialText: state.text,
             onChange,

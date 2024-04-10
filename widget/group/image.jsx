@@ -20,7 +20,7 @@ const fallbackUrl =
 const inner = (
   <div className={className} style={style} key={JSON.stringify(image)}>
     <Widget
-      src="mob.near/widget/Image"
+      src="${alias_mob}/widget/Image"
       props={{
         image: group.image,
         alt: title,

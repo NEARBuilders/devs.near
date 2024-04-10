@@ -11,7 +11,7 @@ const image = group.image;
 return (
   <div className="group d-inline-block">
     <a
-      href={`#/mob.near/widget/group?groupId=${groupId}`}
+      href={`#/${alias_mob}/widget/group?groupId=${groupId}`}
       className="text-decoration-none link-dark"
     >
       <Widget
