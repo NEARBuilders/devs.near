@@ -81,9 +81,9 @@
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
 
 "@socket.io/component-emitter@~3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
-  integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.1.tgz#621270c02c0a5d4f4669eb1caa9723c91cf201de"
+  integrity sha512-dzJtaDAAoXx4GCOJpbB2eG/Qj8VDpdwkLsWGzGm+0L7E8/434RyMbAHmk9ubXWVAb9nXmc44jUf8GKqVDiKezg==
 
 "@types/cookie@^0.4.1":
   version "0.4.1"
@@ -173,9 +173,9 @@ body-parser@1.20.2:
     unpipe "1.0.0"
 
 bos-workspace@^1.0.0-alpha:
-  version "1.0.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/bos-workspace/-/bos-workspace-1.0.0-alpha.4.tgz#6f48bdc5fc792e320aa3d155527da11028cfc31f"
-  integrity sha512-W03YKSbsaYD6uR7Vvda12sYmPzwA08zc9bUQjOtucEcKoT6AL1pfMhZqRP/mZlB5y1TnZa842Q7sRut9IISCHw==
+  version "1.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/bos-workspace/-/bos-workspace-1.0.0-alpha.9.tgz#f0354455cf80b9d7dc76d31ad9053d1c72f14d40"
+  integrity sha512-RB8dD3AWbFCELzDr8NSp1TMdYUq8fOL5/SpRZiOBZqNO9r9Xb1huYn5ULfJkd6Ljz5VYDDf5f5oi1zoWq3Cjaw==
   dependencies:
     commander "^11.1.0"
     crypto-js "^4.2.0"
