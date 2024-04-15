@@ -13,4 +13,4 @@ jobs:
       signer-account-address: devs.near
       signer-public-key: ed25519:3Dbo15yXr9awiTepLpxb8cbXHRsTfsZ2fgnguX1PCEnR
     secrets:
-      SIGNER_PRIVATE_KEY:  ${{ secrets.DEVS_SIGNER_PRIVATE_KEY }}
+      SIGNER_PRIVATE_KEY:  ${{ secrets.SIGNER_PRIVATE_KEY }}
