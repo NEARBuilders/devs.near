@@ -1,0 +1,16 @@
+{
+  "account": "devs.near",
+  "format": true,
+  "ipfs": {
+    "gateway": "https://ipfs.near.social/ipfs",
+    "uploadApi": "https://ipfs.near.social/add",
+    "uploadApiHeaders": {}
+  },
+  "aliases": ["./aliases.mainnet.json"],
+  "overrides": {
+    "testnet": {
+      "account": "neardevs.testnet",
+      "aliases": ["./aliases.testnet.json"]
+    }
+  }
+}
