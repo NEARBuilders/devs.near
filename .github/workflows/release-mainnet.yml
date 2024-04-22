@@ -11,6 +11,6 @@ jobs:
       app-name: "devs.near"
       deploy-account-address:  devs.near
       signer-account-address: devs.near
-      signer-public-key: ed25519:J8XTprxQ1nAmCPwtYWHLBCUWq4mwn8zkE2aHwJTtFo1Y
+      signer-public-key: ed25519:3Dbo15yXr9awiTepLpxb8cbXHRsTfsZ2fgnguX1PCEnR
     secrets:
       SIGNER_PRIVATE_KEY:  ${{ secrets.SIGNER_PRIVATE_KEY }}

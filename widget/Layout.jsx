@@ -29,62 +29,64 @@ const SplitLayout = styled.div`
   }
 `;
 
-return ({ variant, blocks, children }) => {
-  const { Header, Footer, Sidebar, Left, Right } = blocks;
+return {
+  Layout: ({ variant, blocks, children }) => {
+    const { Header, Footer, Sidebar, Left, Right } = blocks;
 
-  Header = Header ? Header : () => <></>;
-  Footer = Footer ? Footer : () => <></>;
-  Sidebar = Sidebar ? Sidebar : () => <></>;
-  Left = Left ? Left : ({ children }) => <>{children}</>;
-  Right = Right ? Right : ({ children }) => <>{children}</>;
+    Header = Header ? Header : () => <></>;
+    Footer = Footer ? Footer : () => <></>;
+    Sidebar = Sidebar ? Sidebar : () => <></>;
+    Left = Left ? Left : ({ children }) => <>{children}</>;
+    Right = Right ? Right : ({ children }) => <>{children}</>;
 
-  if (!variant) {
-    variant = "standard";
-  }
+    if (!variant) {
+      variant = "standard";
+    }
 
-  const availableVariants = ["standard", "sidebar", "split"];
+    const availableVariants = ["standard", "sidebar", "split"];
 
-  if (!availableVariants.includes(variant)) {
-    return 'Invalid Variant: "' + variant + '"';
-  }
+    if (!availableVariants.includes(variant)) {
+      return 'Invalid Variant: "' + variant + '"';
+    }
 
-  switch (variant) {
-    case "standard":
-      return (
-        <StandardLayout>
-          <Header />
-          {children}
-          <Footer />
-        </StandardLayout>
-      );
-    case "sidebar":
-      return (
-        <StandardLayout>
-          <Header />
-          <SidebarLayout>
-            <div className="aside">
+    switch (variant) {
+      case "standard":
+        return (
+          <StandardLayout>
+            <Header />
+            {children}
+            <Footer />
+          </StandardLayout>
+        );
+      case "sidebar":
+        return (
+          <StandardLayout>
+            <Header />
+            <SidebarLayout>
+              <div className="aside">
+                <Sidebar />
+              </div>
+              <div className="main">{children}</div>
+            </SidebarLayout>
+            <Footer />
+          </StandardLayout>
+        );
+      case "split":
+        return (
+          <StandardLayout>
+            <Header />
+            <SplitLayout>
               <Sidebar />
-            </div>
-            <div className="main">{children}</div>
-          </SidebarLayout>
-          <Footer />
-        </StandardLayout>
-      );
-    case "split":
-      return (
-        <StandardLayout>
-          <Header />
-          <SplitLayout>
-            <Sidebar />
-            <div className="children">
-              <Left>{children}</Left>
-            </div>
-            <div className="children">
-              <Right>{children}</Right>
-            </div>
-          </SplitLayout>
-          <Footer />
-        </StandardLayout>
-      );
-  }
+              <div className="children">
+                <Left>{children}</Left>
+              </div>
+              <div className="children">
+                <Right>{children}</Right>
+              </div>
+            </SplitLayout>
+            <Footer />
+          </StandardLayout>
+        );
+    }
+  },
 };

@@ -9,7 +9,7 @@ const Content = styled.div`
 `;
 
 const Template = ({ layout, theme, blocks, children }) => {
-  const Layout = VM.require(layout?.src ?? "${config_account}/widget/Layout") || (() => <></>);
+  const { Layout } = VM.require(layout?.src ?? "${config_account}/widget/Layout") || (() => <></>);
 
   return (
     <Container style={theme}>
