@@ -15,8 +15,6 @@ jobs:
         with:
           node-version: 20
           cache: "yarn"
-      - name: Install dependencies
-        run: yarn ci
       - name: Run code formatting check
         run: yarn run fmt:check
   playwright-tests:
@@ -30,10 +28,8 @@ jobs:
           cache: "yarn"
       - name: Install dependencies
         run: |
-          yarn ci
           yarn add bos-workspace
           npx playwright install-deps
-          npx playwright install
       - name: Run tests
         run: |
           npx playwright test
