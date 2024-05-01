@@ -23,8 +23,7 @@ const cachedRenderItem = (item, i) => {
 };
 
 index.options = index.options || {};
-const initialRenderLimit =
-  props.initialRenderLimit ?? index.options.limit ?? 10;
+const initialRenderLimit = props.initialRenderLimit ?? index.options.limit ?? 10;
 const addDisplayCount = props.nextLimit ?? initialRenderLimit;
 
 index.options.limit = Math.min(
@@ -47,9 +46,9 @@ const computeFetchFrom = (items, limit) => {
 };
 
 const mergeItems = (newItems) => {
-  const items = [
-    ...new Set([...newItems, ...state.items].map((i) => JSON.stringify(i))),
-  ].map((i) => JSON.parse(i));
+  const items = [...new Set([...newItems, ...state.items].map((i) => JSON.stringify(i)))].map((i) =>
+    JSON.parse(i)
+  );
   items.sort((a, b) => a.blockHeight - b.blockHeight);
   if (index.options.order === "desc") {
     items.reverse();
@@ -103,9 +102,7 @@ if (state.fetchFrom) {
 const filteredItems = state.items;
 if (filter) {
   if (filter.ignore) {
-    filteredItems = filteredItems.filter(
-      (item) => !(item.accountId in filter.ignore)
-    );
+    filteredItems = filteredItems.filter((item) => !(item.accountId in filter.ignore));
   }
 }
 
@@ -133,11 +130,7 @@ const makeMoreItems = () => {
 
 const loader = (
   <div className="loader" key={"loader"}>
-    <span
-      className="spinner-grow spinner-grow-sm me-1"
-      role="status"
-      aria-hidden="true"
-    />
+    <span className="spinner-grow spinner-grow-sm me-1" role="status" aria-hidden="true" />
     Loading ...
   </div>
 );
@@ -176,11 +169,7 @@ return props.manual ? (
     hasMore={state.displayCount < filteredItems.length}
     loader={
       <div className="loader">
-        <span
-          className="spinner-grow spinner-grow-sm me-1"
-          role="status"
-          aria-hidden="true"
-        />
+        <span className="spinner-grow spinner-grow-sm me-1" role="status" aria-hidden="true" />
         Loading ...
       </div>
     }

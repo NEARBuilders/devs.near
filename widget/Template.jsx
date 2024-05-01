@@ -13,10 +13,7 @@ const Template = ({ layout, theme, blocks, children }) => {
 
   return (
     <Container style={theme}>
-      <Layout
-        {...(layout?.initialProps ?? { variant: "standard" })}
-        blocks={blocks}
-      >
+      <Layout {...(layout?.initialProps ?? { variant: "standard" })} blocks={blocks}>
         {children}
       </Layout>
     </Container>

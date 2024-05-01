@@ -12,11 +12,6 @@ const Container = styled.div`
 
 return (
   <Container>
-    <MonacoEditor
-      path={path}
-      language={language}
-      defaultValue={defaultValue}
-      onChange={onChange}
-    />
+    <MonacoEditor path={path} language={language} defaultValue={defaultValue} onChange={onChange} />
   </Container>
 );

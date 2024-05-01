@@ -143,12 +143,7 @@ const types = [
 ];
 
 const DefaultEditor = ({ value, onChange, onBlur }) => (
-  <EditorTextarea
-    placeholder="Start typing..."
-    value={value}
-    onChange={onChange}
-    onBlur={onBlur}
-  />
+  <EditorTextarea placeholder="Start typing..." value={value} onChange={onChange} onBlur={onBlur} />
 );
 
 return (
@@ -218,10 +213,7 @@ return (
               });
             },
             toggle: (
-              <Button
-                className="classic"
-                disabled={!path}
-              >
+              <Button className="classic" disabled={!path}>
                 <>
                   <i className={"bi bi-send"} />
                   post

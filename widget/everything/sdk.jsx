@@ -1,5 +1,4 @@
-const isPrimitiveType = (type) =>
-  ["string", "number", "boolean", "date", "md"].includes(type);
+const isPrimitiveType = (type) => ["string", "number", "boolean", "date", "md"].includes(type);
 
 const isComplexType = (type) =>
   Array.isArray(type)
@@ -99,9 +98,7 @@ function MissingPropsWarning({ props, typeDef, WarningElement }) {
               <p className="card-text">
                 {`There ${missingProps.length === 1 ? "is" : "are"} ${
                   missingProps.length
-                } missing or invalid prop${
-                  missingProps.length === 1 ? "" : "s"
-                }:`}
+                } missing or invalid prop${missingProps.length === 1 ? "" : "s"}:`}
               </p>
               <ul className="list-group list-group-flush">
                 {missingProps.map((prop) => (
@@ -131,12 +128,7 @@ function filterByType(data, targetType) {
 
 function deepMerge(obj1, obj2) {
   return Object.keys({ ...obj1, ...obj2 }).reduce((acc, key) => {
-    if (
-      obj1[key] &&
-      obj2[key] &&
-      typeof obj1[key] === "object" &&
-      typeof obj2[key] === "object"
-    ) {
+    if (obj1[key] && obj2[key] && typeof obj1[key] === "object" && typeof obj2[key] === "object") {
       acc[key] = deepMerge(obj1[key], obj2[key]);
     } else {
       acc[key] = obj2[key] !== undefined ? obj2[key] : obj1[key];

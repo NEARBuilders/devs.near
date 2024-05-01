@@ -8,8 +8,8 @@ return (
       <hr />
       <p className="mb-0">
         Customize the <span className="bg-warning">web4/index</span> in your{" "}
-        <span className="bg-warning">bos.config.json</span> to designate the
-        default widget you want to replace this page, then rebuild and redeploy.
+        <span className="bg-warning">bos.config.json</span> to designate the default widget you want
+        to replace this page, then rebuild and redeploy.
       </p>
     </div>
   </div>

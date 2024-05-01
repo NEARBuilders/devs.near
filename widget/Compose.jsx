@@ -27,15 +27,10 @@ const composeData = () => {
     path: `${context.accountId}/post/main`,
   };
 
-  const notifications = state.extractMentionNotifications(
-    state.content.text,
-    item
-  );
+  const notifications = state.extractMentionNotifications(state.content.text, item);
 
   if (notifications.length) {
-    data.index.notify = JSON.stringify(
-      notifications.length > 1 ? notifications : notifications[0]
-    );
+    data.index.notify = JSON.stringify(notifications.length > 1 ? notifications : notifications[0]);
   }
 
   const hashtags = state.extractHashtags(state.content.text);

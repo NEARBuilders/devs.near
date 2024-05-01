@@ -29,10 +29,7 @@ const Block = styled.div`
 
 return (
   <>
-    <select
-      value={selectedLayout}
-      onChange={(e) => setSelectedLayout(e.target.value)}
-    >
+    <select value={selectedLayout} onChange={(e) => setSelectedLayout(e.target.value)}>
       {variants.map((variant) => (
         <option key={variant} value={variant}>
           {variant}
@@ -50,13 +47,17 @@ return (
         Header: () => (
           <Block style={{ backgroundColor: "#AEC6CF" }}>
             Header{" "}
-            <button className="" onClick={() => setCount(count + 1)}>{count} + 1</button>
+            <button className="" onClick={() => setCount(count + 1)}>
+              {count} + 1
+            </button>
           </Block>
         ),
         Footer: () => (
           <Block style={{ backgroundColor: "#F4CCCC" }}>
             Footer{" "}
-            <button className="" onClick={() => setCount(count + 3)}>{count} + 3</button>
+            <button className="" onClick={() => setCount(count + 3)}>
+              {count} + 3
+            </button>
           </Block>
         ),
         Left: ({ children }) => (
@@ -65,15 +66,15 @@ return (
         Right: ({ children }) => (
           <Block style={{ backgroundColor: "#FFE599" }}>Right {children}</Block>
         ),
-        Sidebar: () => (
-          <Block style={{ backgroundColor: "#D9D2E9" }}>Sidebar</Block>
-        ),
+        Sidebar: () => <Block style={{ backgroundColor: "#D9D2E9" }}>Sidebar</Block>,
       }}
     >
       <Container>
         <Block>
           Child
-          <button className="" onClick={() => setCount(count + 2)}>{count} + 2</button>
+          <button className="" onClick={() => setCount(count + 2)}>
+            {count} + 2
+          </button>
         </Block>
       </Container>
     </Template>

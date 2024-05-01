@@ -2,10 +2,7 @@ if (!context.accountId || !props.term) return <></>;
 
 let results = [];
 const profilesData = Social.get("*/profile/name", "final") || {};
-const followingData = Social.get(
-  `${context.accountId}/graph/follow/**`,
-  "final"
-);
+const followingData = Social.get(`${context.accountId}/graph/follow/**`, "final");
 
 if (!profilesData || !followingData) return <></>;
 
@@ -17,9 +14,7 @@ for (let i = 0; i < profiles.length; i++) {
   let score = 0;
   const accountId = profiles[i][0];
   const accountIdSearch = profiles[i][0].replace(/\W/g, "").toLowerCase();
-  const nameSearch = (profiles[i][1]?.profile?.name || "")
-    .replace(/\W/g, "")
-    .toLowerCase();
+  const nameSearch = (profiles[i][1]?.profile?.name || "").replace(/\W/g, "").toLowerCase();
   const accountIdSearchIndex = accountIdSearch.indexOf(term);
   const nameSearchIndex = nameSearch.indexOf(term);
 
