@@ -84,10 +84,7 @@ return (
         onChange={(e) => State.update({ newThing: e.target.value })}
       />
       <div className="d-flex align-items-center mt-2">
-        <button
-          className="btn btn-primary m-2"
-          onClick={() => addThing(state.newThing)}
-        >
+        <button className="btn btn-primary m-2" onClick={() => addThing(state.newThing)}>
           add
         </button>
         {Object.keys(state.things).length > 0 && (
@@ -110,10 +107,7 @@ return (
               <div className="d-flex m-2">
                 <p className="mt-3 me-5">{thing}</p>
                 <br />
-                <button
-                  className="btn btn-danger m-1"
-                  onClick={() => removeThing(thing)}
-                >
+                <button className="btn btn-danger m-1" onClick={() => removeThing(thing)}>
                   remove
                 </button>
               </div>

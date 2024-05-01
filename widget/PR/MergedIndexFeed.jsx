@@ -95,22 +95,13 @@ for (let iIndex = 0; iIndex < indices.length; ++iIndex) {
   );
   const desc = index.options.order === "desc";
 
-  const initialItems = Social.index(
-    index.action,
-    index.key,
-    index.options,
-    index.cacheOptions
-  );
+  const initialItems = Social.index(index.action, index.key, index.options, index.cacheOptions);
   if (initialItems === null) {
     continue;
   }
 
   const jInitialItems = JSON.stringify(initialItems);
-  const nextFetchFrom = computeFetchFrom(
-    initialItems,
-    index.options.limit,
-    desc
-  );
+  const nextFetchFrom = computeFetchFrom(initialItems, index.options.limit, desc);
   if (feed.jInitialItems !== jInitialItems) {
     feed.jInitialItems = jInitialItems;
     feedChanged = true;
@@ -181,9 +172,7 @@ while (filteredItems.length < state.displayCount) {
     }
     if (
       bestItem === null ||
-      (desc
-        ? item.blockHeight > bestItem.blockHeight
-        : item.blockHeight < bestItem.blockHeight)
+      (desc ? item.blockHeight > bestItem.blockHeight : item.blockHeight < bestItem.blockHeight)
     ) {
       bestItem = item;
     }
@@ -212,9 +201,7 @@ while (filteredItems.length < state.displayCount) {
   }
   // remove duplicate posts
   const existingItemIndex = filteredItems.findIndex(
-    (item) =>
-      item.blockHeight === bestItem.blockHeight &&
-      item.accountId === bestItem.accountId
+    (item) => item.blockHeight === bestItem.blockHeight && item.accountId === bestItem.accountId
   );
 
   if (existingItemIndex === -1) {
@@ -276,19 +263,14 @@ const makeMoreItems = () => {
 
 const loader = (
   <div className="loader" key={"loader"}>
-    <span
-      className="spinner-grow spinner-grow-sm me-1"
-      role="status"
-      aria-hidden="true"
-    />
+    <span className="spinner-grow spinner-grow-sm me-1" role="status" aria-hidden="true" />
     Loading ...
   </div>
 );
 
 const fetchMore =
   props.manual &&
-  (state.feeds.some((f) => !!f.fetchFrom) &&
-  filteredItems.length < state.displayCount
+  (state.feeds.some((f) => !!f.fetchFrom) && filteredItems.length < state.displayCount
     ? loader
     : state.displayCount < filteredItems.length && (
         <div key={"loader more"}>

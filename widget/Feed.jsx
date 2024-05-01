@@ -1,12 +1,4 @@
-const Feed = ({
-  index,
-  items,
-  typeWhitelist,
-  Item,
-  Layout,
-  showCompose,
-  perPage,
-}) => {
+const Feed = ({ index, items, typeWhitelist, Item, Layout, showCompose, perPage }) => {
   Item = Item || ((props) => <div>{JSON.stringify(props)}</div>);
   Layout = Layout || (({ children }) => children);
 
@@ -46,9 +38,7 @@ const Feed = ({
 
   const appendHashtags = (v) => {
     const arr = Array.isArray(index) ? index : [index];
-    const hashtags = arr
-      .filter((i) => i.action === "hashtag")
-      .map((i) => i.key);
+    const hashtags = arr.filter((i) => i.action === "hashtag").map((i) => i.key);
 
     hashtags.forEach((hashtag) => {
       if (v.toLowerCase().includes(`#${hashtag.toLowerCase()}`)) return;

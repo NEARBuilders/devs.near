@@ -29,12 +29,7 @@ const addProposal = ({ daoId, proposal }) => {
   });
 };
 
-const createFunctionCallProposal = ({
-  daoId,
-  receiver_id,
-  method_name,
-  args,
-}) => {
+const createFunctionCallProposal = ({ daoId, receiver_id, method_name, args }) => {
   const proposal_args = Buffer.from(JSON.stringify(args), "utf-8").toString("base64");
   addProposal({
     daoId,
@@ -79,7 +74,7 @@ const create = (v) => {
         },
       },
     },
-  })
+  });
 };
 
 return { createFunctionCallProposal, create };

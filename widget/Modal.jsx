@@ -1,12 +1,4 @@
-const {
-  Trigger,
-  Content,
-  isOpen,
-  onClose,
-  onOpen,
-  ModalOverlay,
-  ModalContainer,
-} = props ?? {
+const { Trigger, Content, isOpen, onClose, onOpen, ModalOverlay, ModalContainer } = props ?? {
   Trigger: () => <></>,
   Content: () => <></>,
   isOpen: false,
@@ -59,9 +51,7 @@ const Modal = ({ isOpen, closeModal, children }) => {
 
   return (
     <ModalOverlay onClick={closeModal}>
-      <ModalContainer onClick={(e) => e.stopPropagation()}>
-        {children}
-      </ModalContainer>
+      <ModalContainer onClick={(e) => e.stopPropagation()}>{children}</ModalContainer>
     </ModalOverlay>
   );
 };

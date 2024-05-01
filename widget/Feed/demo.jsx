@@ -68,9 +68,8 @@ return (
   <div className="d-flex flex-column gap-1 pb-4">
     <h1>Feed</h1>
     <p>
-      Compact module for embedding either a list of items or merged
-      Social.index() feeds, features infinite scroll and ability to provide a
-      custom Item to render.
+      Compact module for embedding either a list of items or merged Social.index() feeds, features
+      infinite scroll and ability to provide a custom Item to render.
     </p>
     <Widget
       src={`nearui.near/widget/Typography.Text`}

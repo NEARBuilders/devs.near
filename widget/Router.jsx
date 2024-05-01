@@ -31,10 +31,7 @@ function Router({ config, ...passProps }) {
     findDefaultRoute(routes) ??
     (routes && Object.keys(routes).length && routes[Object.keys(routes)[0]]);
   const activeRoute =
-    (routes &&
-      routes.hasOwnProperty(passProps[param]) &&
-      routes[passProps[param]]) ||
-    defaultRoute;
+    (routes && routes.hasOwnProperty(passProps[param]) && routes[passProps[param]]) || defaultRoute;
 
   if (!PageNotFound) PageNotFound = () => <p>404 Not Found</p>;
 

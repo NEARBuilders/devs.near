@@ -16,8 +16,7 @@ if (state.image === undefined) {
 
   if (props.onHelper) {
     const extractMentions = (text) => {
-      const mentionRegex =
-        /@((?:(?:[a-z\d]+[-_])*[a-z\d]+\.)*(?:[a-z\d]+[-_])*[a-z\d]+)/gi;
+      const mentionRegex = /@((?:(?:[a-z\d]+[-_])*[a-z\d]+\.)*(?:[a-z\d]+[-_])*[a-z\d]+)/gi;
       mentionRegex.lastIndex = 0;
       const accountIds = new Set();
       for (const match of text.matchAll(mentionRegex)) {
@@ -277,14 +276,7 @@ const gifSvg = (
     viewBox="0 0 16 16"
   >
     <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-    <text
-      x="8"
-      y="11"
-      text-anchor="middle"
-      font-size="7"
-      stroke="currentColor"
-      strokeWidth="0.5"
-    >
+    <text x="8" y="11" text-anchor="middle" font-size="7" stroke="currentColor" strokeWidth="0.5">
       GIF
     </text>
   </svg>
@@ -309,10 +301,7 @@ const gifSearchWidget = useMemo(
   [gifSearch]
 );
 
-const MemoizedAvatar = useMemo(
-  () => <User accountId={context.accountId} />,
-  [context.accountId]
-);
+const MemoizedAvatar = useMemo(() => <User accountId={context.accountId} />, [context.accountId]);
 
 useEffect(() => {
   if (state.text === "") {
