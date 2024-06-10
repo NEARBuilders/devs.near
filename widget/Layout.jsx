@@ -3,17 +3,15 @@ const StandardLayout = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
-
-
 `;
 
 const SidebarLayout = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-@media screen and (max-width: 768px){
-  flex-direction: column;
-}
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
   .aside {
     display: flex;
   }
@@ -26,9 +24,7 @@ const SidebarLayout = styled.div`
 const SplitLayout = styled.div`
   display: flex;
   width: 100%;
-@media screen and (max-width: 768px){
-  flex-direction: column;
-}
+
   .children {
     flex-grow: 1;
     flex-basis: 0;
