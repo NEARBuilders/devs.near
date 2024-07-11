@@ -1,4 +1,4 @@
-const { href } = VM.require("${config_account}/widget/lib.url") || {
+const { href } = VM.require("devs.near/widget/lib.url") || {
   href: () => "/",
 };
 const Content = styled.div`
