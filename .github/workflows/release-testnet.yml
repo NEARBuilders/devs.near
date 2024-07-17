@@ -3,7 +3,7 @@ on:
   push:
     branches: [develop]
 jobs:
-  deploy-mainnet:
+  deploy-testnet:
     uses: NEARBuilders/bos-workspace/.github/workflows/deploy.yml@main
     with:
       bw-legacy: false
