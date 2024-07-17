@@ -1,8 +1,8 @@
-const { Layout } = VM.require("devs.near/widget/Layout") || {
+const { Layout } = VM.require("${config_account}/widget/Layout") || {
   Layout: () => <>layout not found</>,
 };
 
-const { Router } = VM.require("devs.near/widget/Router") || {
+const { Router } = VM.require("${config_account}/widget/Router") || {
   Router: () => <>router not found</>,
 };
 
@@ -51,7 +51,7 @@ const Content = () => (
               init: item,
             },
             home: {
-              path: "devs.near/widget/Library",
+              path: "${config_account}/widget/Library",
               init: item,
             },
           },
