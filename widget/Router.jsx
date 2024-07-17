@@ -1,4 +1,4 @@
-const { href } = VM.require("devs.near/widget/lib.url") || {
+const { href } = VM.require("${config_account}/widget/lib.url") || {
   href: () => "/",
 };
 const Content = styled.div`
@@ -49,7 +49,7 @@ function Router({ config, ...passProps }) {
       <Content key={param + JSON.stringify(activeRoute)}>
         <Widget
           src={activeRoute.path}
-          props={activeRoute.init}
+          props={{ ...activeRoute.init, ...passProps}}
           loading={<div style={{ height: "100%", width: "100%" }} />}
         />
       </Content>
