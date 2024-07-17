@@ -41,7 +41,7 @@ const Content = () => (
   <Layout blocks={{ Header, Footer }}>
     <div style={{ height: "60vh" }}>
       "mob.near/post/main@81101335" // this is a very personal thing...
-      <p>{JSON.stringify(data)}</p> 
+      <p>{JSON.stringify(data)}</p>
       <Router
         config={{
           param: "page",
@@ -56,7 +56,7 @@ const Content = () => (
             },
           },
         }}
-          page={"home"}
+        page={"home"}
       />
     </div>
   </Layout>
