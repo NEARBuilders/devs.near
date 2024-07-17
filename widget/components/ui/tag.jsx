@@ -2,7 +2,7 @@ const { X } = VM.require("${config_account}/widget/icons") || {
   X: () => <></>,
 };
 
-const { Badge } = VM.require("${config_account}/widget/components") || {
+const { Badge } = VM.require("${config_account}/widget/components.Index") || {
   Badge: () => <></>,
 };
 

@@ -1,4 +1,4 @@
-const { Avatar, Button, Badge, Logo } = VM.require("${config_account}/widget/components") || {
+const { Avatar, Button, Badge, Logo } = VM.require("${config_account}/widget/components.Index") || {
   Avatar: () => <></>,
   Button: () => <></>,
   Badge: () => <></>,

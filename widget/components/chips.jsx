@@ -1,4 +1,4 @@
-const { Chip } = VM.require("${config_account}/widget/components") || {
+const { Chip } = VM.require("${config_account}/widget/components.Index") || {
   Chip: () => <></>,
 };
 
