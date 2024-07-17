@@ -74,7 +74,6 @@ const Header = styled.div`
 
 const Search = styled.div`
   width: 246px;
-
   @media (max-width: 500px) {
     width: 100%;
   }
@@ -106,16 +105,13 @@ const Text = styled.p`
   text-overflow: ${(p) => (p.ellipsis ? "ellipsis" : "")};
   white-space: ${(p) => (p.ellipsis ? "nowrap" : "")};
   overflow-wrap: anywhere;
-
   b {
     font-weight: 600;
     color: #11181c;
   }
-
   &[href] {
     display: inline-flex;
     gap: 0.25rem;
-
     &:hover,
     &:focus {
       text-decoration: underline;
@@ -127,11 +123,9 @@ const Items = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-
   @media (max-width: 1200px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   @media (max-width: 800px) {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -154,14 +148,12 @@ const Button = styled.button`
   cursor: pointer;
   color: #11181c !important;
   margin: 0;
-
   &:hover,
   &:focus {
     background: #ecedee;
     text-decoration: none;
     outline: none;
   }
-
   span {
     color: #687076 !important;
   }
@@ -174,13 +166,11 @@ const Tabs = styled.div`
   margin-bottom: -24px;
   overflow: auto;
   scroll-behavior: smooth;
-
   @media (max-width: 1200px) {
     background: #f8f9fa;
     border-top: 1px solid #eceef0;
     margin-left: -12px;
     margin-right: -12px;
-
     > * {
       flex: 1;
     }
@@ -202,11 +192,9 @@ const TabsButton = styled.a`
   outline: none;
   text-align: center;
   text-decoration: none !important;
-
   &:hover {
     color: #11181c;
   }
-
   &::after {
     content: "";
     display: ${(p) => (p.selected ? "block" : "none")};

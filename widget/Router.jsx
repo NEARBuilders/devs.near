@@ -23,10 +23,7 @@ function Router({ config, ...passProps }) {
   if (!param) param = "page";
   const defaultRoute = findDefaultRoute(routes);
   const activeRoute =
-    (routes &&
-      routes.hasOwnProperty(passProps[param]) &&
-      routes[passProps[param]]) ||
-    defaultRoute;
+    (routes && routes.hasOwnProperty(passProps[param]) && routes[passProps[param]]) || defaultRoute;
   if (!PageNotFound) PageNotFound = () => <p>404 Not Found</p>;
   if (!activeRoute) {
     // Handle 404 or default case for unknown routes
@@ -49,7 +46,7 @@ function Router({ config, ...passProps }) {
       <Content key={param + JSON.stringify(activeRoute)}>
         <Widget
           src={activeRoute.path}
-          props={{ ...activeRoute.init, ...passProps}}
+          props={{ ...activeRoute.init, ...passProps }}
           loading={<div style={{ height: "100%", width: "100%" }} />}
         />
       </Content>
