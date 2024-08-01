@@ -1,6 +1,7 @@
 {
   "account": "devs.near",
   "format": true,
+  "index": "devs.near/widget/Index",
   "ipfs": {
     "gateway": "https://ipfs.near.social/ipfs",
     "uploadApi": "https://ipfs.near.social/add",
@@ -9,6 +10,7 @@
   "aliases": ["./aliases.mainnet.json"],
   "overrides": {
     "testnet": {
+      "index": "neardevs.testnet/widget/Index",
       "account": "neardevs.testnet",
       "aliases": ["./aliases.testnet.json"]
     }

@@ -13,7 +13,7 @@ const components = [
     // category: "Profile",
     widgetName: "Feed",
     description: "",
-    // demoProps: { accountId },
+    demoProps: { accountId },
     // requiredProps: {
     //   accountId: "The account ID of the profile",
     // },
@@ -28,7 +28,7 @@ const components = [
     // category: "Profile",
     widgetName: "ContextMenu",
     description: "",
-    // demoProps: { accountId, tooltip: true },
+    demoProps: { accountId, tooltip: true },
     // requiredProps: {
     //   accountId: "The account ID of the profile",
     // },
@@ -44,7 +44,7 @@ const components = [
     // category: "Profile",
     widgetName: "Router",
     description: "",
-    // demoProps: { accountId, tooltip: true },
+    demoProps: { accountId, tooltip: true },
     // requiredProps: {
     //   accountId: "The account ID of the profile",
     // },
